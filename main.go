@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"ipcli/app"
+	"log"
 	"os"
 )
 
@@ -13,6 +14,7 @@ func main() {
 	err := appGNR.Run(os.Args)
 
 	if err != nil {
-		fmt.Println("ERROR")
+		fmt.Println("==== ERROR ====")
+		log.Fatal(err)
 	}
 }
