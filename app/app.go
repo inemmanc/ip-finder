@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"log"
 	"net"
 
 	"github.com/urfave/cli"
@@ -48,6 +49,7 @@ func ipFinder(c *cli.Context) {
 		fmt.Printf("=== ERROR ===\n")
 		fmt.Println()
 		fmt.Printf("IP NOT FOUND %s\n", host)
+		log.Fatal()
 	}
 
 	for _, ip := range ips {
@@ -64,6 +66,7 @@ func nameFinder(c *cli.Context) {
 		fmt.Println("=== ERROR ===")
 		fmt.Println()
 		fmt.Printf("SERVER NOT FOUND: %s\n", host)
+		log.Fatal()
 	}
 
 	for _, server := range servers {
