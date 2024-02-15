@@ -45,7 +45,9 @@ func ipFinder(c *cli.Context) {
 	ips, err := net.LookupIP(host)
 
 	if err != nil {
-		fmt.Println("ERROR FINDING IP")
+		fmt.Printf("=== ERROR ===\n")
+		fmt.Println()
+		fmt.Printf("IP NOT FOUND %s\n", host)
 	}
 
 	for _, ip := range ips {
@@ -57,8 +59,11 @@ func nameFinder(c *cli.Context) {
 	host := c.String("host")
 
 	servers, err := net.LookupNS(host)
+
 	if err != nil {
-		fmt.Println("ERROR NAME SERVER")
+		fmt.Println("=== ERROR ===")
+		fmt.Println()
+		fmt.Printf("SERVER NOT FOUND: %s\n", host)
 	}
 
 	for _, server := range servers {
