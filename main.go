@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Println("START")
+	fmt.Println("START\n")
 	appGNR := app.Generate()
 	err := appGNR.Run(os.Args)
+
 	if err != nil {
 		fmt.Println("ERROR")
 	}
