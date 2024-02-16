@@ -17,7 +17,6 @@ func Generate() *cli.App {
 	flags := []cli.Flag{
 		cli.StringFlag{
 			Name: "host",
-			// default value
 			Value: "google.com",
 		},
 	}
