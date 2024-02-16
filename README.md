@@ -1,6 +1,6 @@
 ### GO VERSION 1.21.6
 
-FIND THE IP
+FIND THE IP  
     ip --host <host>  
     example: ./ipcli ip --host google.com  
     example RESPONSE: 192.168.0.1  
