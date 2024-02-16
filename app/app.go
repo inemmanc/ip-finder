@@ -69,6 +69,6 @@ func nameFinder(c *cli.Context) {
 	}
 
 	for _, server := range servers {
-		fmt.Println(server)
+		fmt.Println(server.Host)
 	}
 }
