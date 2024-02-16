@@ -2,6 +2,7 @@ package app
 
 import (
 	"fmt"
+	"log"
 	"net"
 
 	"github.com/urfave/cli"
@@ -16,7 +17,6 @@ func Generate() *cli.App {
 	flags := []cli.Flag{
 		cli.StringFlag{
 			Name: "host",
-			// default value
 			Value: "google.com",
 		},
 	}
@@ -45,7 +45,10 @@ func ipFinder(c *cli.Context) {
 	ips, err := net.LookupIP(host)
 
 	if err != nil {
-		fmt.Println("ERROR FINDING IP")
+		fmt.Printf("=== ERROR ===\n")
+		fmt.Println()
+		fmt.Printf("IP NOT FOUND %s\n", host)
+		log.Fatal()
 	}
 
 	for _, ip := range ips {
@@ -57,8 +60,12 @@ func nameFinder(c *cli.Context) {
 	host := c.String("host")
 
 	servers, err := net.LookupNS(host)
+
 	if err != nil {
-		fmt.Println("ERROR NAME SERVER")
+		fmt.Println("=== ERROR ===")
+		fmt.Println()
+		fmt.Printf("SERVER NOT FOUND: %s\n", host)
+		log.Fatal()
 	}
 
 	for _, server := range servers {
