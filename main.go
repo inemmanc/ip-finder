@@ -8,7 +8,10 @@ import (
 )
 
 func main() {
+	fmt.Println("-_-_-_-_                      _-_-_-_-")
 	fmt.Println("-_-_-_-_ IP and SERVER FINDER _-_-_-_-")
+	fmt.Println("-_-_-_-_                      _-_-_-_-")
+
 	fmt.Println()
 	appGNR := app.Generate()
 	err := appGNR.Run(os.Args)

@@ -1,6 +1,6 @@
 module ipcli
 
-go 1.21.6
+go 1.22.0
 
 require github.com/urfave/cli v1.22.14
 
