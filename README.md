@@ -1,7 +1,7 @@
 ### GO VERSION 1.22.0
 
-NOW YOU HAVE TO BUILD THE APP YOUR OWN
-    go build
+NOW YOU HAVE TO BUILD THE APP YOUR OWN  
+go build
 
 FIND THE IP  
     example: ./ipcli ip --host google.com  
