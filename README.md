@@ -1,4 +1,4 @@
-### GO VERSION 1.22.0
+# IPCLI - ip finder
 
 #### FIND THE IP  
     example: ./ipcli ip --host google.com  
